@@ -92,6 +92,7 @@ button {
 .text {
   flex-shrink: 0;
   width: 100%;
+  vertical-align: middle;
 }
 
 .navigator {
@@ -129,10 +130,12 @@ input[name=slide] {
 }
 
 .bar span {
-  padding: 1.1rem 0.75rem;
+  padding: 1.5rem 0.85rem;
   background-color: transparent;
   cursor: pointer;
 }
+
+/* img slider */ 
 
 #input__1:checked ~ .slide__list {
   transform: translate(0%);
@@ -166,6 +169,8 @@ input[name=slide] {
   background-color: #111;
 }
 
+/* Text slider */
+
 #input__1:checked ~ .slider__text .text__container{
   transform: translate(0%);
 }
@@ -182,5 +187,38 @@ input[name=slide] {
   transform: translate(-300%);
 }
 
+/* Media */
 
+@media (max-width: 1280px) {
+  
+.slider {
+  max-width: 70%;
+}
 
+}
+
+@media (max-width: 767px) {
+  
+.slider {
+  max-width: 80%; 
+}
+
+.slider__text {
+  width: 100%;
+  order: 3;
+}
+
+.navigator {
+  width: auto;
+  margin: 0 auto;
+}
+
+}
+
+@media (max-width: 320px) {
+  
+.slider {
+  max-width: 90%;
+}
+
+}
